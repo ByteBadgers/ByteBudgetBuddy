@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ByteBudgetBuddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <nav class="topnav">
+    <a href="{{ url_for('index') }}">Dashboard</a>
+    <a href="{{ url_for('add') }}">Add Transaction</a>
+    <a href="{{ url_for('transactions') }}">All Transactions</a>
+    <a href="{{ url_for('export_csv') }}">Export CSV</a>
+  </nav>
+
+<main class="container">
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+</main>
+<script>
+  // Auto-hide flash messages after 3 seconds
+  setTimeout(() => {
+    document.querySelectorAll(".flash").forEach(flash => {
+      flash.style.transition = "opacity 0.5s ease";
+      flash.style.opacity = "0";
+      setTimeout(() => flash.remove(), 500); // remove from DOM after fade
+    });
+  }, 3000);
+</script>
+</body>
+</html>

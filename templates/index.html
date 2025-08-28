@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Dashboard</h1>
+
+<section class="cards">
+  <div class="card">
+    <div class="label">Income</div>
+    <div class="value">${{ "%.2f"|format(summary.income) }}</div>
+  </div>
+  <div class="card">
+    <div class="label">Expenses</div>
+    <div class="value">${{ "%.2f"|format(summary.expenses) }}</div>
+  </div>
+  <div class="card">
+    <div class="label">Balance</div>
+    <div class="value">${{ "%.2f"|format(summary.balance) }}</div>
+  </div>
+</section>
+
+<h2>Category Breakdown</h2>
+<table>
+  <thead><tr><th>Category</th><th>Total</th></tr></thead>
+  <tbody>
+    {% for row in breakdown %}
+      <tr><td>{{ row.category }}</td><td>${{ "%.2f"|format(row.total) }}</td></tr>
+    {% else %}
+      <tr><td colspan="2">No expenses yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Recent Transactions</h2>
+<table>
+  <thead><tr><th>Type</th><th>Amount</th><th>Category</th><th>Date</th></tr></thead>
+  <tbody>
+    {% for r in recent %}
+      <tr>
+        <td>{{ r.type }}</td>
+        <td>${{ "%.2f"|format(r.amount) }}</td>
+        <td>{{ r.category }}</td>
+        <td>{{ r.date }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="4">No transactions yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
