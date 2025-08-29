@@ -3,6 +3,13 @@
 ByteBudgetBuddy is a personal finance tracker built with **Flask (Python)** and **SQLite**.  
 It provides a web-based dashboard to track income, expenses, balances, and generate financial summaries.
 
+[![Deployed on Render](https://img.shields.io/badge/Hosted%20on-Render-46E3B7?logo=render&logoColor=white)](https://your-app-name.onrender.com)
+
+---
+
+##Live Demo  
+[Click here to try ByteBudgetBuddy](https://your-app-name.onrender.com)
+
 ---
 
 ## Features
