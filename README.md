@@ -26,10 +26,12 @@ It provides a web-based dashboard to track income, expenses, balances, and gener
 ## Screenshots
 
 ### Dashboard
-"C:\Users\rodef\OneDrive\Pictures\Screenshots\Screenshot 2025-08-27 215650.png"
+<img width="1913" height="912" alt="Screenshot 2025-08-27 215650" src="https://github.com/user-attachments/assets/40898bfd-9187-4ff2-89be-bdbeef79343f" />
+
 
 ### Add Transaction
-"C:\Users\rodef\OneDrive\Pictures\Screenshots\Screenshot 2025-08-27 215750.png"
+<img width="1917" height="907" alt="Screenshot 2025-08-27 215750" src="https://github.com/user-attachments/assets/1296fa91-c1bb-4ef4-a5d8-0b40518e23e6" />
+
 
 ---
 
