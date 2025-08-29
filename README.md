@@ -7,7 +7,7 @@ It provides a web-based dashboard to track income, expenses, balances, and gener
 
 ---
 
-##Live Demo  
+# Live Demo  
 [Click here to try ByteBudgetBuddy](https://your-app-name.onrender.com)
 
 ---
